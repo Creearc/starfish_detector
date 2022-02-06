@@ -105,7 +105,7 @@ class YOLOv3(nn.Module):
 
       x = layer(x)
       if isinstance(layer, ResidualBlock) and layer.num_repeats == 8:
-        route_connections.append9x0
+        route_connections.append(x)
 
       elif isinstance(layer, nn.Upsample):
         x = torch.cat([x, route_connections[-1]], dim=1)
