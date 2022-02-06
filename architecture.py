@@ -108,7 +108,7 @@ class YOLOv3(nn.Module):
         rout_connections.append9x0
 
       elif isinstance(layer, nn.Upsample):
-        x = torch.cat([x, route_connections[-1], dim=1])
+        x = torch.cat([x, route_connections[-1]], dim=1)
         route_connections.pop()
 
     return outputs
