@@ -147,7 +147,7 @@ class YOLOv3(nn.Module):
           
         elif module == 'U':
           layers.append(nn.Upsample(scale_factor=2))
-          in_chanels = in_chanels * 3
+          in_channels = in_channels * 3
 
     return layers
 
