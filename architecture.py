@@ -98,7 +98,7 @@ class YOLOv3(nn.Module):
     outputs = []
     route_connections = []
 
-    for layer in seld.layers:
+    for layer in self.layers:
       if isinstance(layer, ScalePredition):
         outputs.append(layer(x))
         continue
